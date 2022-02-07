@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cat << toto
+test redirection de sortie
+
+toto

@@ -1,0 +1,4 @@
+function calcul_aire(){
+	echo "aire=$(($1*$2))"
+}
+calcul_aire $1 $2

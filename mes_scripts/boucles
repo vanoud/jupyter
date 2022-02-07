@@ -1,0 +1,49 @@
+#!/bin/bash
+: '
+var=lettres
+set a b c      #affectation des paramètres de position a b c
+echo "$var" "$1" "$2" "$3"
+echo "$#"
+if [ $# == 3 ] ; then   
+echo "il y a trois paramètres, leurs valeurs sont : "$1", "$2", "$3" "
+echo " et une variable nommée var de valeur \"lettres\"."
+fi'
+
+: '
+number=$1
+while [ $number -lt 10 ]
+do
+  echo "$number"
+  number=$(( number+1 ))
+done'
+
+: '
+number=1
+until [ $number -ge 10 ]
+do
+  echo "$number"
+  number=$(( number+1 ))
+  
+  
+  #if (( number > 5 ))
+  #then
+  #  break
+  #fi
+  
+done'
+
+#for i in {0..20..2}
+#for (( i=0; i<=5; i++ ))
+for i in 1 2 3 4 5
+do
+  #if [ $i -gt 5 ]
+  #then
+  #  break
+  #fi
+  
+  #if [ $i -eq 3 ] || [ $i -eq 7]
+  #then
+  #  continue
+  #fi
+  echo $i
+done

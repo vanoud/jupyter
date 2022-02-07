@@ -1,0 +1,23 @@
+#!/bin/bash
+
+declare -r pwdfile=/etc/passwd
+declare -i nombre
+# Ce script va traiter les occurrences suivantes de "nombre" comme un entier.
+
+nombre=3
+echo "Nombre = $nombre"     # Nombre = 3
+
+nombre=trois
+echo "Nombre = $nombre"     # Nombre = 0
+# Essaie d'évaluer la chaîne "trois" comme un entier.
+
+n=6/3
+echo "n = $n"       # n = 6/3
+
+declare -i n
+n=6/3
+echo "n = $n"       # n = 2
+
+declare -a index
+
+declare -f nom_fonction

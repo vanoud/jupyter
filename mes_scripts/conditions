@@ -1,0 +1,41 @@
+#!/bin/bash
+
+: '
+count=10
+
+#-ne -gt -lt -ge -le
+# if (($count > 9))
+
+if [ $count -lt 5 ]
+then
+	echo "first condition is true"
+elif (($count > 9))
+then
+	echo "second condition is true"
+else
+	echo "the condition is false"
+fi'
+
+echo $@
+age=19
+
+#or : -o ou [[ || ]]
+#if [ "$age" -gt 18 && "$age" -lt 40 ]
+
+: 'if [ "$age" -gt 18 ] && [ "$age" -lt 40 ]
+then
+	echo "age is correct"
+else
+	echo "age is not correct"
+fi'
+
+car=$1
+
+case $car in
+  "BMW" )
+    echo "It's BMW" ;;
+  "HONDA" )
+    echo "It's Honda" ;;
+  * )
+    echo "unknown" ;;
+esac

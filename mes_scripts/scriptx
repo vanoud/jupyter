@@ -1,0 +1,20 @@
+#!/bin/bash
+set -o posix
+
+
+if [ -z "$1" ]
+then
+  echo "Un nouveau script $USER ? Son nom: "
+  read nom
+else
+  nom=$1
+fi
+  touch $nom
+
+echo "#!/bin/bash" >> $nom 
+chmod u+x $nom 
+
+if [[ "$PWD" != "$HOME/mes_scripts" ]] 
+then
+  mv ~/$nom ~/mes_scripts/$nom 
+fi
